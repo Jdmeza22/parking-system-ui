@@ -6,7 +6,6 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatIconModule } from '@angular/material/icon';
-import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ParkingService } from '../../services/parking.service';
 import { ParkingStateService } from '../../services/parking-state.service';
 import { RegisterEntryRequest } from '../../models/register-entry.model';
@@ -22,7 +21,6 @@ import { TranslocoPipe } from '@jsverse/transloco';
     MatButtonModule,
     MatFormFieldModule,
     MatSelectModule,
-    MatSnackBarModule,
     MatIconModule,
     TranslocoPipe
   ],

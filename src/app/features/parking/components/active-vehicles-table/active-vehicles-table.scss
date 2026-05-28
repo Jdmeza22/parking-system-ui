@@ -1,0 +1,15 @@
+table {
+  width: 100%;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  padding: 32px;
+}
+
+.empty-state {
+  padding: 24px;
+  text-align: center;
+  font-size: 16px;
+}

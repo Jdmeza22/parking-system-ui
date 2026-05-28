@@ -1,0 +1,18 @@
+.dashboard-container {
+  padding: 32px;
+}
+
+h1 {
+  margin-bottom: 32px;
+}
+
+.forms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.table-card {
+  margin-top: 16px;
+}

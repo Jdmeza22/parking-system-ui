@@ -1,1 +1,17 @@
-<p>vehicle-exit-form works!</p>
+<h2>Register Exit</h2>
+
+<form [formGroup]="form" (ngSubmit)="registerExit()">
+
+  <mat-form-field appearance="outline">
+    <mat-label>
+      Plate
+    </mat-label>
+
+    <input matInput formControlName="plate">
+  </mat-form-field>
+
+  <button mat-raised-button color="accent" type="submit" [disabled]="loading">
+    Register Exit
+  </button>
+
+</form>

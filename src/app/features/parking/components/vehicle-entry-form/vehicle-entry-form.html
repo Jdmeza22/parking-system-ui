@@ -1,1 +1,29 @@
-<p>vehicle-entry-form works!</p>
+<h2>Register Entry</h2>
+
+<form [formGroup]="form" (ngSubmit)="registerEntry()">
+
+  <mat-form-field appearance="outline">
+    <mat-label>Plate</mat-label>
+    <input matInput formControlName="plate">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Vehicle Type</mat-label>
+
+    <mat-select formControlName="vehicleTypeId">
+
+      @for (item of vehicleTypes;  track item.id
+      ) {
+        <mat-option [value]="item.id">
+          {{ item.name }}
+        </mat-option>
+      }
+
+    </mat-select>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit" [disabled]="loading">
+    Register Entry
+  </button>
+
+</form>

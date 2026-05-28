@@ -1,1 +1,55 @@
-<p>active-vehicles-table works!</p>
+<h2>Active Vehicles</h2>
+
+@if (loading()) {
+  <div class="loading-container">
+    <mat-spinner diameter="40"></mat-spinner>
+  </div>
+
+} @else {
+  @if (vehicles().length === 0) {
+    <div class="empty-state">
+      No active vehicles
+    </div>
+  } @else {
+    <table mat-table [dataSource]="vehicles()">
+      <ng-container matColumnDef="plate">
+
+        <th mat-header-cell *matHeaderCellDef>
+          Plate
+        </th>
+
+        <td mat-cell *matCellDef="let item">
+          {{ item.plate }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="vehicleType">
+
+        <th mat-header-cell *matHeaderCellDef>
+          Vehicle Type
+        </th>
+
+        <td mat-cell *matCellDef="let item">
+          {{ item.vehicleType }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="entryDate">
+
+        <th mat-header-cell *matHeaderCellDef>
+          Entry Date
+        </th>
+
+        <td mat-cell *matCellDef="let item">
+          {{ item.entryDate | date:'short' }}
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+
+      <tr mat-row *matRowDef="  let row; columns: displayedColumns"></tr>
+    </table>
+
+  }
+
+}

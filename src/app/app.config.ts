@@ -7,12 +7,19 @@ import { errorInterceptor } from './core/interceptors/error.interceptor';
 import { TranslocoHttpLoader } from './transloco-loader';
 import { provideTransloco } from '@jsverse/transloco';
 import { loadingInterceptor } from './core/interceptors/loading-interceptor.interceptor';
+import { provideToastr } from 'ngx-toastr';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideAnimations(),
     provideRouter(routes),
     provideHttpClient(withInterceptors([errorInterceptor, loadingInterceptor])),
+
+    provideToastr({
+    positionClass: 'toast-top-right',
+    timeOut: 4000,
+    preventDuplicates: true
+  }),
 
     provideTransloco({
       config: {

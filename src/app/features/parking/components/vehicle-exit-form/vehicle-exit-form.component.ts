@@ -1,6 +1,5 @@
 import { Component, inject } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
-import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { ParkingService } from '../../services/parking.service';
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
@@ -19,7 +18,6 @@ import { TranslocoPipe } from '@jsverse/transloco';
     CommonModule,
     MatDialogModule,
     MatButtonModule,
-    MatSnackBarModule,
     MatFormFieldModule,
     ReactiveFormsModule,
     MatInputModule,
@@ -62,6 +60,7 @@ export class VehicleExitFormComponent {
         this.loading = false;
       },
       error: (error) => {
+
         this.loading = false;
       }
     });

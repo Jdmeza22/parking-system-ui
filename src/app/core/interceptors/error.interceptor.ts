@@ -1,26 +1,33 @@
 import { HttpErrorResponse, HttpInterceptorFn } from '@angular/common/http';
 import { inject } from '@angular/core';
 import { catchError, throwError } from 'rxjs';
-import { MatSnackBar } from '@angular/material/snack-bar';
+import { ToastrService } from 'ngx-toastr';
 
 export const errorInterceptor: HttpInterceptorFn = (req, next) => {
-  const snackBar = inject(MatSnackBar);
-
+  const toastr = inject(ToastrService);
   return next(req).pipe(
-    catchError(
-      (error: HttpErrorResponse) => {
-        let message = 'Unexpected error occurred';
-        if (error.error?.message) {
-          message = error.error.message;
-        }
+    catchError((error: HttpErrorResponse) => {
+      let message = 'Unexpected error occurred';
+      switch (error.status) {
+        case 400:
+          message = error.error?.message ?? 'Bad request';
+          break;
+        case 404:
+          message = 'Resource not found';
+          break;
+        case 500:
+          message = 'Internal server error';
+          break;
+        default:
+          message = error.error?.message ??'Unexpected error occurred';
+          break;
+      }
 
-        snackBar.open(message,'Close',
-          {
-            duration: 4000
-          });
-        return throwError(
-          () => error
-        );
-      })
+      toastr.error(message);
+      return throwError(() => error);
+
+    })
+
   );
+
 };

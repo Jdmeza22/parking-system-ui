@@ -32,15 +32,12 @@ export class VehicleExitFormComponent {
 
   private readonly fb = inject(FormBuilder);
   private readonly parkingService = inject(ParkingService);
-  private readonly snackBar = inject(MatSnackBar);
   private readonly dialog = inject(MatDialog);
   private readonly parkingStateService = inject(ParkingStateService);
 
   loading = false;
 
-  form = this.fb.group({
-    plate: ['', Validators.required]
-  });
+  form = this.fb.group({plate: ['', Validators.required]});
 
   registerExit(): void {
 

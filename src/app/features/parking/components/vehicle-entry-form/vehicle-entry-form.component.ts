@@ -32,7 +32,6 @@ export class VehicleEntryFormComponent {
 
   private readonly fb = inject(FormBuilder);
   private readonly parkingService = inject(ParkingService);
-  private readonly snackBar = inject(MatSnackBar);
   private readonly parkingStateService = inject(ParkingStateService);
 
   loading = false;

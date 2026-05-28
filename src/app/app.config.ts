@@ -6,12 +6,13 @@ import { provideAnimations } from '@angular/platform-browser/animations';
 import { errorInterceptor } from './core/interceptors/error.interceptor';
 import { TranslocoHttpLoader } from './transloco-loader';
 import { provideTransloco } from '@jsverse/transloco';
+import { loadingInterceptor } from './core/interceptors/loading-interceptor.interceptor';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideAnimations(),
     provideRouter(routes),
-    provideHttpClient(withInterceptors([errorInterceptor])),
+    provideHttpClient(withInterceptors([errorInterceptor, loadingInterceptor])),
 
     provideTransloco({
       config: {

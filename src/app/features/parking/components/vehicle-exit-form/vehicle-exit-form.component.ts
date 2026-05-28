@@ -4,6 +4,7 @@ import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { ParkingService } from '../../services/parking.service';
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { ExitResultDialogComponent } from '../exit-result-dialog/exit-result-dialog.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -22,7 +23,7 @@ import { TranslocoPipe } from '@jsverse/transloco';
     MatFormFieldModule,
     ReactiveFormsModule,
     MatInputModule,
-
+    MatIconModule,
     TranslocoPipe
   ],
   templateUrl: './vehicle-exit-form.html',

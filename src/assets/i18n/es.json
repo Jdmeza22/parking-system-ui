@@ -7,6 +7,16 @@
     "paymentSummary":"Resumen de Pago"
   },
 
+  "subtitles": {
+    "entry":"Ingrese los detalles del vehículo para registrar su entrada.",
+    "exit":"Seleccione el vehículo para registrar su salida.",
+    "activeVehicles":"Lista de vehículos actualmente.",
+    "paymentSummary":"Detalles del pago para el vehículo seleccionado.",
+    "registerNewVehicle":"Registrar nuevo vehículo",
+    "registerExitVehicle":"Registrar salida del vehículo",
+    "noActiveVehicles":"No hay vehículos activos",
+    "noRegisteredVehicles":"No hay vehículos registrados"
+  },
 
   "labels": {
     "plate": "Placa",

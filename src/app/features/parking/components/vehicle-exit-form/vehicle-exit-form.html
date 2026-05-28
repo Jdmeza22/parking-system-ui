@@ -1,17 +1,30 @@
-<h2>{{ 'titles.exit' | transloco }}</h2>
+<div class="exit-form-container">
+  <div class="form-header">
 
-<form [formGroup]="form" (ngSubmit)="registerExit()">
+    <div class="icon-container">
+      <mat-icon>logout</mat-icon>
+    </div>
 
-  <mat-form-field appearance="outline">
-    <mat-label>
-      {{ 'labels.plate' | transloco }}
-    </mat-label>
+    <div>
+      <h2>{{ 'titles.exit' | transloco }}</h2>
+      <p>{{ 'subtitles.exit' | transloco }}</p>
+    </div>
 
-    <input matInput formControlName="plate">
-  </mat-form-field>
+  </div>
 
-  <button mat-raised-button color="accent" type="submit" [disabled]="loading">
-    {{ 'buttons.registerExit' | transloco }}
-  </button>
+  <form [formGroup]="form" (ngSubmit)="registerExit()">
+    <mat-form-field appearance="outline"  class="custom-field">
+      <mat-label>
+        {{ 'labels.plate' | transloco }}
+      </mat-label>
 
-</form>
+      <input matInput formControlName="plate" placeholder="ABC123" maxlength="6">
+      <mat-icon matPrefix> badge</mat-icon>
+    </mat-form-field>
+
+    <button mat-flat-button type="submit"class="exit-button" [disabled]="loading">
+      <mat-icon>logout</mat-icon>
+      {{ 'buttons.registerExit' | transloco }}
+    </button>
+  </form>
+</div>

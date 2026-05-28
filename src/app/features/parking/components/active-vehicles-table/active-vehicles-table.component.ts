@@ -6,13 +6,14 @@ import { MatTableModule } from '@angular/material/table';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { ParkingStateService } from '../../services/parking-state.service';
 import { TranslocoPipe } from '@jsverse/transloco';
+import { MatIconModule } from '@angular/material/icon';
 @Component({
   selector: 'app-active-vehicles-table',
   imports: [
     CommonModule,
     MatTableModule,
     MatProgressSpinnerModule,
-
+    MatIconModule,
     TranslocoPipe
   ],
   templateUrl: './active-vehicles-table.html',

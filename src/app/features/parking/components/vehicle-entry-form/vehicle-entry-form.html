@@ -1,29 +1,49 @@
-<h2>{{ 'titles.entry' | transloco }}</h2>
+<div class="entry-form-container">
+  <div class="form-header">
+    <div class="icon-container">
+      <mat-icon>directions_car</mat-icon>
+    </div>
 
-<form [formGroup]="form" (ngSubmit)="registerEntry()">
+    <div>
+      <h2>{{ 'titles.entry' | transloco }}</h2>
+      <p>{{ 'subtitles.entry' | transloco }}</p>
+    </div>
+  </div>
 
-  <mat-form-field appearance="outline">
-    <mat-label>{{ 'labels.plate' | transloco }}</mat-label>
-    <input matInput formControlName="plate">
-  </mat-form-field>
+  <form [formGroup]="form" (ngSubmit)="registerEntry()">
+    <mat-form-field appearance="outline" class="custom-field">
 
-  <mat-form-field appearance="outline">
-    <mat-label>{{ 'labels.vehicleType' | transloco }}</mat-label>
+      <mat-label>
+        {{ 'labels.plate' | transloco }}
+      </mat-label>
 
-    <mat-select formControlName="vehicleTypeId">
+      <input matInput formControlName="plate" placeholder="ABC123" maxlength="6">
 
-      @for (item of vehicleTypes;  track item.id
-      ) {
-        <mat-option [value]="item.id">
-          {{ item.name }}
-        </mat-option>
-      }
+      <mat-icon matPrefix> badge </mat-icon>
+    </mat-form-field>
 
-    </mat-select>
-  </mat-form-field>
+    <mat-form-field appearance="outline" class="custom-field">
 
-  <button mat-raised-button color="primary" type="submit" [disabled]="loading">
-     {{ 'buttons.registerEntry' | transloco }}
-  </button>
+      <mat-label>
+        {{ 'labels.vehicleType' | transloco }}
+      </mat-label>
 
-</form>
+      <mat-select formControlName="vehicleTypeId">
+
+        @for (item of vehicleTypes; track item.id) {
+          <mat-option [value]="item.id">
+            {{ item.name }}
+          </mat-option>
+        }
+      </mat-select>
+
+      <mat-icon matPrefix> local_shipping</mat-icon>
+    </mat-form-field>
+
+    <button mat-flat-button type="submit" class="entry-button"
+      [disabled]="loading">
+      <mat-icon>login</mat-icon>
+      {{ 'buttons.registerEntry' | transloco }}
+    </button>
+  </form>
+</div>

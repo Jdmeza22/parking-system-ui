@@ -7,6 +7,18 @@
     "paymentSummary": "Payment Summary"
   },
 
+  "subtitles": {
+    "entry":"Enter the vehicle details to register its entry.",
+    "exit":"Select the vehicle to register its exit.",
+    "activeVehicles":"List of currently parked vehicles.",
+    "paymentSummary":"Payment details for the selected vehicle.",
+    "registerNewVehicle":"Register new vehicle",
+    "registerExitVehicle":"Register vehicle exit",
+    "noActiveVehicles":"No active vehicles",
+    "noRegisteredVehicles":"No registered vehicles"
+  },
+
+
   "labels": {
     "plate": "Plate",
     "vehicleType":"Vehicle Type",

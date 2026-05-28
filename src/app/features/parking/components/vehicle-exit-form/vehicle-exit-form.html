@@ -1,17 +1,17 @@
-<h2>Register Exit</h2>
+<h2>{{ 'titles.exit' | transloco }}</h2>
 
 <form [formGroup]="form" (ngSubmit)="registerExit()">
 
   <mat-form-field appearance="outline">
     <mat-label>
-      Plate
+      {{ 'labels.plate' | transloco }}
     </mat-label>
 
     <input matInput formControlName="plate">
   </mat-form-field>
 
   <button mat-raised-button color="accent" type="submit" [disabled]="loading">
-    Register Exit
+    {{ 'buttons.registerExit' | transloco }}
   </button>
 
 </form>

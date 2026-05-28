@@ -12,11 +12,12 @@ export const appConfig: ApplicationConfig = {
     provideAnimations(),
     provideRouter(routes),
     provideHttpClient(withInterceptors([errorInterceptor])),
-    provideHttpClient(),
+
     provideTransloco({
       config: {
-        availableLangs: ['en'],
+        availableLangs: ['en','es'],
         defaultLang: 'en',
+        fallbackLang: 'en',
 
         reRenderOnLangChange: true,
         prodMode: !isDevMode(),

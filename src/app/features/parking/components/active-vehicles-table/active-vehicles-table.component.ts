@@ -5,12 +5,15 @@ import { ParkingService } from '../../services/parking.service';
 import { MatTableModule } from '@angular/material/table';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { ParkingStateService } from '../../services/parking-state.service';
+import { TranslocoPipe } from '@jsverse/transloco';
 @Component({
   selector: 'app-active-vehicles-table',
   imports: [
     CommonModule,
     MatTableModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+
+    TranslocoPipe
   ],
   templateUrl: './active-vehicles-table.html',
   styleUrl: './active-vehicles-table.scss',

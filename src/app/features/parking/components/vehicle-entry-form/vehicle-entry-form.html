@@ -1,14 +1,14 @@
-<h2>Register Entry</h2>
+<h2>{{ 'titles.entry' | transloco }}</h2>
 
 <form [formGroup]="form" (ngSubmit)="registerEntry()">
 
   <mat-form-field appearance="outline">
-    <mat-label>Plate</mat-label>
+    <mat-label>{{ 'labels.plate' | transloco }}</mat-label>
     <input matInput formControlName="plate">
   </mat-form-field>
 
   <mat-form-field appearance="outline">
-    <mat-label>Vehicle Type</mat-label>
+    <mat-label>{{ 'labels.vehicleType' | transloco }}</mat-label>
 
     <mat-select formControlName="vehicleTypeId">
 
@@ -23,7 +23,7 @@
   </mat-form-field>
 
   <button mat-raised-button color="primary" type="submit" [disabled]="loading">
-    Register Entry
+     {{ 'buttons.registerEntry' | transloco }}
   </button>
 
 </form>

@@ -1,0 +1,35 @@
+{
+  "titles": {
+    "dashboard":"Sistema de Parqueadero",
+    "entry":"Registrar Entrada",
+    "exit":"Registrar Salida",
+    "activeVehicles":"Vehículos Activos",
+    "paymentSummary":"Resumen de Pago"
+  },
+
+
+  "labels": {
+    "plate": "Placa",
+    "vehicleType":"Tipo Vehículo",
+    "entryDate":"Fecha Entrada",
+    "totalMinutes":"Minutos Totales",
+    "totalAmount": "Monto Total"
+  },
+
+  "buttons": {
+    "registerEntry":"Registrar Entrada",
+    "registerExit": "Registrar Salida",
+    "close":"Cerrar"
+  },
+
+  "messages": {
+    "emptyVehicles":"No hay vehículos activos.",
+    "entrySuccess":"Entrada registrada correctamente.",
+    "exitSuccess":"Salida registrada correctamente.",
+    "unexpectedError":"Ocurrió un error inesperado."
+  },
+
+  "loading": {
+    "default": "Cargando..."
+  }
+}

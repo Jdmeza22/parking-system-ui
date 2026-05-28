@@ -9,6 +9,7 @@ import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { ParkingService } from '../../services/parking.service';
 import { ParkingStateService } from '../../services/parking-state.service';
 import { RegisterEntryRequest } from '../../models/register-entry.model';
+import { TranslocoPipe } from '@jsverse/transloco';
 
 @Component({
   selector: 'app-vehicle-entry-form',
@@ -20,7 +21,9 @@ import { RegisterEntryRequest } from '../../models/register-entry.model';
     MatButtonModule,
     MatFormFieldModule,
     MatSelectModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+
+    TranslocoPipe
   ],
   templateUrl: './vehicle-entry-form.html',
   styleUrl: './vehicle-entry-form.scss',

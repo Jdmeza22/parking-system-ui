@@ -1,4 +1,4 @@
-<h2>Active Vehicles</h2>
+<h2>{{ 'titles.activeVehicles' | transloco }}</h2>
 
 @if (loading()) {
   <div class="loading-container">
@@ -8,14 +8,14 @@
 } @else {
   @if (vehicles().length === 0) {
     <div class="empty-state">
-      No active vehicles
+      {{ 'labels.empty' | transloco }}
     </div>
   } @else {
     <table mat-table [dataSource]="vehicles()">
       <ng-container matColumnDef="plate">
 
         <th mat-header-cell *matHeaderCellDef>
-          Plate
+          {{ 'labels.plate' | transloco }}
         </th>
 
         <td mat-cell *matCellDef="let item">
@@ -26,7 +26,7 @@
       <ng-container matColumnDef="vehicleType">
 
         <th mat-header-cell *matHeaderCellDef>
-          Vehicle Type
+          {{ 'labels.vehicleType' | transloco }}
         </th>
 
         <td mat-cell *matCellDef="let item">
@@ -37,7 +37,7 @@
       <ng-container matColumnDef="entryDate">
 
         <th mat-header-cell *matHeaderCellDef>
-          Entry Date
+          {{ 'labels.entryDate' | transloco }}
         </th>
 
         <td mat-cell *matCellDef="let item">

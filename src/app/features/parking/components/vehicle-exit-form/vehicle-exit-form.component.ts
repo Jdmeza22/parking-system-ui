@@ -10,6 +10,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { ParkingStateService } from '../../services/parking-state.service';
 import { MatInputModule } from '@angular/material/input';
 import { RegisterExitRequest } from '../../models/register-exit.model';
+import { TranslocoPipe } from '@jsverse/transloco';
 
 @Component({
   selector: 'app-vehicle-exit-form',
@@ -20,7 +21,9 @@ import { RegisterExitRequest } from '../../models/register-exit.model';
     MatSnackBarModule,
     MatFormFieldModule,
     ReactiveFormsModule,
-    MatInputModule
+    MatInputModule,
+
+    TranslocoPipe
   ],
   templateUrl: './vehicle-exit-form.html',
   styleUrl: './vehicle-exit-form.scss',

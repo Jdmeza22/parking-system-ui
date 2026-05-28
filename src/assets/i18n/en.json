@@ -1,0 +1,34 @@
+{
+  "titles": {
+    "dashboard": "Parking System",
+    "entry": "Register Entry",
+    "exit":"Register Exit",
+    "activeVehicles": "Active Vehicles",
+    "paymentSummary": "Payment Summary"
+  },
+
+  "labels": {
+    "plate": "Plate",
+    "vehicleType":"Vehicle Type",
+    "entryDate": "Entry Date",
+    "totalMinutes": "Total Minutes",
+    "totalAmount":"Total Amount"
+  },
+
+  "buttons": {
+    "registerEntry": "Register Entry",
+    "registerExit":"Register Exit",
+    "close": "Close"
+  },
+
+  "messages": {
+    "emptyVehicles":"No active vehicles.",
+    "entrySuccess":"Vehicle entry registered successfully.",
+    "exitSuccess":"Vehicle exit registered successfully.",
+    "unexpectedError":"Unexpected error occurred."
+  },
+
+  "loading": {
+    "default":"Loading..."
+  }
+}

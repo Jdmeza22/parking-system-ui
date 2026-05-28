@@ -1,9 +1,16 @@
-import { TranslocoGlobalConfig } from '@jsverse/transloco-utils';
+import { provideTransloco } from '@jsverse/transloco';
+import { TranslocoHttpLoader } from './src/app/transloco-loader';
 
-const config: TranslocoGlobalConfig = {
-  rootTranslationsPath: 'public/i18n/',
-  langs: ['en'],
-  keysManager: {},
-};
-
-export default config;
+export const translocoConfig =
+  provideTransloco({
+    config: {
+      availableLangs: [
+        'en',
+        'es'
+      ],
+      defaultLang: 'en',
+      reRenderOnLangChange: true,
+      prodMode: false
+    },
+    loader:TranslocoHttpLoader
+  });

@@ -4,6 +4,7 @@ import { MatCardModule } from '@angular/material/card';
 import { ActiveVehiclesTableComponent } from '../../components/active-vehicles-table/active-vehicles-table.component';
 import { VehicleEntryFormComponent } from '../../components/vehicle-entry-form/vehicle-entry-form.component';
 import { VehicleExitFormComponent } from '../../components/vehicle-exit-form/vehicle-exit-form.component';
+import { TranslocoPipe } from '@jsverse/transloco';
 
 @Component({
   selector: 'app-dashboard',
@@ -13,7 +14,8 @@ import { VehicleExitFormComponent } from '../../components/vehicle-exit-form/veh
      MatCardModule,
      VehicleEntryFormComponent,
      VehicleExitFormComponent,
-     ActiveVehiclesTableComponent
+     ActiveVehiclesTableComponent,
+     TranslocoPipe
   ],
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.scss',
